@@ -122,4 +122,19 @@ public class CalculatorTest {
             assertEquals("Division by zero", e.getMessage());
         }
     }
+
+    @Test
+    public void testModuloWithNegativeDividend() throws Exception {
+
+        //Setup
+        Calculator calc = new CalculatorImpl();
+
+        //Execute
+        calc.push(-7);
+        calc.push(3);
+        double result = calc.perform(Operation.mod);
+
+        //Verify
+        assertEquals(-1, result, 0);
+    }
 }
