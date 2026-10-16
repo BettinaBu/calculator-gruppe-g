@@ -28,6 +28,14 @@ public class CalculatorImpl implements Calculator {
                 return c;
             case mul:
                 return a * b;
+
+            case mod:
+                if (b == 0) {
+                    throw new CalculatorException("Division by zero");
+                }
+                return a % b;
+
+            default:
         }
         return 0;
     }
