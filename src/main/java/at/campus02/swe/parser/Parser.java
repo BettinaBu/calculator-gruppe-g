@@ -78,7 +78,7 @@ public class Parser {
             return Operation.div;
         else if ("-".equals(value))
             return Operation.sub;
-        else if ("%".equals(value))
+        else if ("%".equals(value)) //this has been added, this has been done, pretty much fun
             return Operation.mod;
         {
 
