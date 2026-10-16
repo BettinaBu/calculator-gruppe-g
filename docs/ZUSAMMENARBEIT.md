@@ -1,15 +1,17 @@
 # Zusammenarbeit in der Gruppe
 
-Eure Moodle-Gruppe arbeitet in **einem gemeinsamen Repository**.
+Eure Moodle-Gruppe arbeitet in **einem gemeinsamen Fork** des Ausgangsprojekts.
+Eine Person erstellt den Fork und lädt die anderen als Collaborators ein.
+Alle klonen diesen Fork; ihr braucht keine zusätzlichen Forks pro Person.
 Die Moodle-Gruppen heißen A, B, C und G. Innerhalb jeder Gruppe bildet ihr
-**Arbeitsteam 1 und Arbeitsteam 2**. Diese entsprechen „Team A“ und „Team B“
-in den Folien; gemeint sind die Arbeitsteams innerhalb einer Moodle-Gruppe.
+**Arbeitsteam 1 und Arbeitsteam 2**.
 
 - **Gruppen A, B und C:** je vier Personen, aufgeteilt in zwei Zweierteams.
 - **Gruppe G:** fünf Personen, aufgeteilt in ein Zweierteam und ein Dreierteam.
 
-Tragt alle Namen, GitHub-Benutzernamen und eure anfängliche Teamaufteilung in
-[ABGABE.md](../ABGABE.md) ein. Alle arbeiten am selben Aufgabenumfang.
+Tragt alle GitHub-Benutzernamen und eure anfängliche Teamaufteilung in
+[ABGABE.md](../ABGABE.md) ein. Die Zuordnung zu euren vollständigen Namen meldet
+ihr in Moodle. Alle arbeiten am selben Aufgabenumfang.
 
 ## Pair Programming innerhalb eines Zweierteams
 
@@ -37,7 +39,10 @@ einer Person.
 3. **Aufgabenbranch erstellen:** beispielsweise `feature/modulo-calculator`.
 4. **Im Arbeitsteam arbeiten:** Code und Tests ergänzen, Änderungen lokal prüfen.
 5. **Commit erstellen und pushen:** Prüft vor dem Commit, welche Dateien dazugehören.
-6. **Pull Request nach `main` öffnen:** Nennt das Issue, alle Beteiligten und eure Tests.
+6. **Pull Request nach `main` im Gruppen-Fork öffnen:** Prüft bei GitHub das
+   **base repository**: Hier muss euer Gruppen-Fork stehen, nicht
+   `g4e817/calculator-template`. Nennt das Issue, alle Beteiligten
+   mit ihren GitHub-Benutzernamen und eure Tests.
 7. **Anderes Arbeitsteam um Review bitten:** Arbeitsteam 1 prüft Änderungen von
    Arbeitsteam 2 und umgekehrt. Mindestens eine Person des anderen Teams gibt das Review ab.
 8. **Rückmeldungen einarbeiten:** Offene Fragen klären und Tests erneut ausführen.

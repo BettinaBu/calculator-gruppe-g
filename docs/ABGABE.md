@@ -1,6 +1,6 @@
 # Abgabe und Bewertung
 
-Abgegeben wird ein **gemeinsamer Projektstand pro Moodle-Gruppe**.
+Abgegeben wird ein **Release im gemeinsamen Fork pro Moodle-Gruppe**.
 Welche Aufgaben zu welchem Termin fällig sind, geben die Lehrenden im Kurs bekannt.
 
 ## Vor der Abgabe
@@ -26,7 +26,8 @@ So müsst ihr den Abgabestand nicht nachträglich verändern.
 ## 2. GitHub-Release erstellen
 
 1. Prüft, dass der richtige Stand auf `main` liegt.
-2. Erstellt über **Releases** einen neuen Release für diesen Stand.
+2. Erstellt **in eurem Gruppen-Fork** über **Releases** einen neuen Release für
+   diesen Stand.
 3. Titel: beispielsweise `Release Gruppe A`, angepasst an eure Moodle-Gruppe.
 4. Tag: beispielsweise `v1.0.0`. Für einen neuen Abgabestand verwendet ihr einen
    neuen Tag, zum Beispiel `v1.1.0`.
@@ -44,8 +45,8 @@ Eine Person reicht für die Gruppe folgende Angaben im vorgesehenen Abgabebereic
 
 ```text
 Gruppe:
-Alle Gruppenmitglieder:
-Repository-Link:
+Alle Gruppenmitglieder mit GitHub-Benutzernamen:
+Link zum Gruppen-Fork:
 Release-Link:
 Release-Tag:
 Vollständige Commit-ID des Releases:
@@ -60,9 +61,10 @@ lokal nach `git fetch --tags`, beispielsweise mit:
 git rev-parse 'v1.0.0^{commit}'
 ```
 
-Ersetzt `v1.0.0` durch euren tatsächlichen Abgabe-Tag. Alle Lehrenden müssen auf
-das private Repository zugreifen können. Ein späterer Commit auf `main` gehört
-nicht automatisch zur abgegebenen Version.
+Ersetzt `v1.0.0` durch euren tatsächlichen Abgabe-Tag. Der Gruppen-Fork und sein
+Release sind öffentlich einsehbar; eine Einladung an die Lehrenden ist zum Lesen
+nicht nötig. Ein späterer Commit auf `main` gehört nicht automatisch zur
+abgegebenen Version. Es wird kein Abgabe-Pull-Request an das Ausgangsprojekt erstellt.
 
 ## Was wird betrachtet?
 

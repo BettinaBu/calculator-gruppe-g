@@ -5,9 +5,25 @@ automatisierte Tests und die Zusammenarbeit in eurer Moodle-Gruppe.
 
 ## Einstieg
 
-1. Klont das Repository eurer **Moodle-Gruppe**, sobald ihr den Link erhalten habt.
-2. Öffnet die `pom.xml` als Maven-Projekt in eurer IDE.
-3. Prüft eure Java- und Maven-Version und führt die vorhandenen Tests aus.
+1. **Eine Person pro Moodle-Gruppe** öffnet
+   [g4e817/calculator-template](https://github.com/g4e817/calculator-template)
+   und erstellt über **Fork** einen Fork im eigenen GitHub-Konto.
+   Name: `calculator-gruppe-a`, `calculator-gruppe-b`, `calculator-gruppe-c`
+   oder `calculator-gruppe-g`, passend zur Gruppe. Kopiert nur den Branch `main`.
+2. Diese Person lädt die anderen Gruppenmitglieder unter **Settings → Collaborators**
+   ein. Alle nehmen die Einladung an und arbeiten in diesem gemeinsamen Fork.
+3. Aktiviert **Issues** unter **Settings → General → Features** und den vorhandenen
+   Workflow im Tab **Actions**, falls GitHub euch dazu auffordert.
+4. Meldet der Lehrperson in Moodle eure Gruppe, Mitglieder mit GitHub-Benutzernamen
+   und den Link zum Gruppen-Fork.
+5. Alle klonen **denselben Gruppen-Fork** über **Code → HTTPS** und öffnen die
+   `pom.xml` als Maven-Projekt in ihrer IDE.
+6. Prüft eure Java- und Maven-Version und führt die vorhandenen Tests aus.
+
+Ein Fork ist eure eigene Kopie auf GitHub; Klonen lädt diese Kopie auf euren
+Computer. Für diese Übung verwendet ihr **Fork**, nicht **Use this template**.
+Das Ausgangsprojekt und eure Forks sind öffentlich. In das Repository gehören
+eure GitHub-Benutzernamen; vollständige Namen und deren Zuordnung meldet ihr in Moodle.
 
 ```sh
 java -version
@@ -34,7 +50,10 @@ Kommandozeilenanwendung mit einer `main`-Methode.
 
 Die Moodle-Gruppen A, B und C arbeiten mit je vier Personen in zwei Zweierteams.
 Gruppe G bleibt mit fünf Personen zusammen und bildet ein Zweierteam und ein
-Dreierteam mit wechselnden Rollen. Jede Gruppe arbeitet in ihrem eigenen Repository.
+Dreierteam mit wechselnden Rollen. Jede Gruppe arbeitet in ihrem gemeinsamen Fork.
+
+Pull Requests gehen an `main` **im eigenen Gruppen-Fork**. Die Abgabe erfolgt als
+Release in diesem Fork; den Release-Link reicht eine Person für die Gruppe in Moodle ein.
 
 **Beginn:** Projekt starten, dann nach Freigabe der Lehrperson Aufgaben 1 und 2
 bearbeiten. Weitere Aufgaben und verbindliche Abgabetermine kündigen die

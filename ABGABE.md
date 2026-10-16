@@ -6,15 +6,16 @@ Vor der Abgabe ausfüllen und committen. Ablauf: [Abgabeanleitung](docs/ABGABE.m
 
 ## Mitglieder
 
-| Name | GitHub-Benutzername | Arbeitsteam beim Einstieg (1 oder 2) |
-| --- | --- | --- |
-| noch ausfüllen | noch ausfüllen | noch ausfüllen |
-| noch ausfüllen | noch ausfüllen | noch ausfüllen |
-| noch ausfüllen | noch ausfüllen | noch ausfüllen |
-| noch ausfüllen | noch ausfüllen | noch ausfüllen |
+| GitHub-Benutzername | Arbeitsteam beim Einstieg (1 oder 2) |
+| --- | --- |
+| noch ausfüllen | noch ausfüllen |
+| noch ausfüllen | noch ausfüllen |
+| noch ausfüllen | noch ausfüllen |
+| noch ausfüllen | noch ausfüllen |
 
 Gruppe G ergänzt eine fünfte Zeile. Nennt alle Mitglieder und dokumentiert unten
 auch die wechselnde Besetzung des Zweier- und Dreierteams.
+Vollständige Namen und die Zuordnung zu den GitHub-Benutzernamen meldet ihr in Moodle.
 
 ## Aufgaben und Nachweise
 
