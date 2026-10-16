@@ -84,4 +84,42 @@ public class CalculatorTest {
         }
 
     }
+
+    @Test
+    public void testSimpleModOperation() throws Exception { //Modulo mit Rest
+
+        Calculator calc = new CalculatorImpl();
+        calc.push(7.0);
+        calc.push(3);
+        double result = calc.perform(Operation.mod);
+
+        assertEquals(1, result, 0); // 1 erwartet, 0 Abweichung erlaubt
+    }
+
+    @Test
+    public void testModOperationWithoutRemainder() throws Exception { //Modulo ohne Rest
+
+        Calculator calc = new CalculatorImpl();
+        calc.push(6.0);
+        calc.push(3);
+        double result = calc.perform(Operation.mod);
+
+        assertEquals(0, result, 0); // 0 erwartet, 0 Abweichung erlaubt
+    }
+
+    @Test
+    public void testModuloByZero() throws Exception {
+
+        Calculator calc = new CalculatorImpl();
+        try {
+            calc.push(2);
+            calc.push(0);
+            calc.perform(Operation.mod);
+
+            fail("Exception expected");
+
+        } catch (CalculatorException e) {
+            assertEquals("Division by zero", e.getMessage());
+        }
+    }
 }
