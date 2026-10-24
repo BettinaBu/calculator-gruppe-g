@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<calculation>
+    <push value="3" />
+    <push value="5" />
+    <operation value="*" />
+    <push value="Result" />
+    <push value="4" />
+    <operation value="%" />
+
+    <!-- 3*5 = 15, dass dann modulo  4 ergbnis 3 -->
+</calculation>
