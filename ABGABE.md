@@ -53,8 +53,10 @@ Aufteilung innerhalb der Teams:
 | 1: Modulo Implementation | David | Szilard, Dominik | Bettina, Abigail |
 | 1: Modulo Test | Bettina Grundtest<br>Abigail Edgecase | Abigail Grundtest<br>Bettina Edgecase | David, Szilard, Dominik |
 | 2: E2E-Tests | David | Szilard, Dominik | Bettina, Abigail |
-| 3: sin/cos | Bettina | Abigail | David, Szilard, Dominik |
-| 4: Skalarprodukt | Bettina | Abigail | David, Szilard, Dominik |
+| 3: sin/cos Implementation | Bettina | Abigail | David, Szilard, Dominik |
+| 3: sin/cos Test |  |  | Bettina, Abigail |
+| 4: Skalarprodukt Implementation| Bettina | Abigail | David, Szilard, Dominik |
+| 4: Skalarprodukt Test |  |  | Bettina, Abigail |
 | CI |  |  |  |
 
 
