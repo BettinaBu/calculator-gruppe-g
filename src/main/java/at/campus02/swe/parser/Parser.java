@@ -39,11 +39,9 @@ public class Parser {
                 } else {
                     calc_.push(Double.parseDouble(value));
                 }
-            } else if ("pop"
-                    .equals(e.asStartElement().getName().getLocalPart())) {
+            } else if ("pop".equals(e.asStartElement().getName().getLocalPart())) {
                 calc_.pop();
-            } else if ("operation".equals(e.asStartElement().getName()
-                    .getLocalPart())) {
+            } else if ("operation".equals(e.asStartElement().getName().getLocalPart())) {
                 result = calc_.perform(readOperation(value));
             }
         }
@@ -80,9 +78,10 @@ public class Parser {
             return Operation.sub;
         else if ("%".equals(value)) //this has been added, this has been done, pretty much fun
             return Operation.mod;
-        {
-
-        }
+        else if ("sin".equals(value))
+            return Operation.sin;
+        else if ("cos".equals(value))
+            return Operation.cos;
 
         throw new CalculatorException("Unsupported Operation");
     }
