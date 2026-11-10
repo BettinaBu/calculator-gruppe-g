@@ -13,6 +13,16 @@ public class CalculatorImpl implements Calculator {
     @Override
     public double perform(Operation op) throws CalculatorException {
 
+        //für einstellige Operationen nur eine Zahl vom Stapel nehmen, deshalb vorgereiht und nicht unten ergänzt
+        // Input Erwartung: Winkel im Bogenmaß, keine Umrechnung
+        switch(op) {
+            case sin:
+                return Math.sin(pop());
+            case cos:
+                return Math.cos(pop());
+            default:                        //einfach unten weitergehen mit zweistelligen Operationen
+        }
+
         double b = pop();
         double a = pop();
 
