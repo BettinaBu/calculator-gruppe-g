@@ -20,6 +20,8 @@ public class CalculatorImpl implements Calculator {
                 return Math.sin(pop());
             case cos:
                 return Math.cos(pop());
+            case dot:
+                return dotProduct(); //Hilfsmethode
             default:                        //einfach unten weitergehen mit zweistelligen Operationen
         }
 
@@ -67,4 +69,39 @@ public class CalculatorImpl implements Calculator {
         stack_.clear();
     }
 
+
+    private double dotProduct() throws CalculatorException {
+        double vektordimension = pop(); // oberste Zahl am Stapel -> sagt uns, wieviele Werte zu jedem Vektor gehören
+
+                                   //Math.floor checkt, ob es eine Kommazahl ist
+        if (vektordimension < 1 || vektordimension != Math.floor(vektordimension)){
+            throw new CalculatorException("Invalid vector dimension. Check last digit.");
+        }
+
+        if (stack_.size() < 2 * vektordimension){
+            throw new CalculatorException("Not enough values.");
+        }
+
+        int components = (int) vektordimension; //casten, weil pop() ein double liefert. Hier ist casten unproblematisch, weil wir mit erster if schon kommazahlen abgefangen haben
+
+        // neue leere Vektoren anlegen je nach Anzahl Vektor-Komponenten [0.0, 0.0, 0.0]
+        double[] vektor1 = new double[components];
+        double[] vektor2 = new double[components];
+
+        //rückwärts denken, vektor 2 ist später draufgekommen also als erstes runternehmen
+        for (int i = components - 1; i >= 0; i--) {
+            vektor2[i] = pop();
+        }
+
+        for (int i = components - 1; i >= 0; i--) {
+            vektor1[i] = pop();
+        }
+
+        double skalarprodukt = 0;
+        for (int i = 0; i < components; i++){
+            skalarprodukt += vektor1[i] * vektor2[i];
+        }
+
+        return skalarprodukt;
+    }
 }
