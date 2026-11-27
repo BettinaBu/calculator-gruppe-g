@@ -137,4 +137,22 @@ public class CalculatorTest {
         //Verify
         assertEquals(-1, result, 0);
     }
+
+    @Test
+    public void testSinOperation() throws Exception {
+        Calculator calc = new CalculatorImpl();
+        calc.push(Math.PI / 2);
+        double result = calc.perform(Operation.sin);
+
+        assertEquals(1.0, result, 1e-9);
+    }
+
+    @Test
+    public void testCosOperation() throws Exception {
+        Calculator calc = new CalculatorImpl();
+        calc.push(0);
+        double result = calc.perform(Operation.cos);
+
+        assertEquals(1.0, result, 1e-9);
+    }
 }
