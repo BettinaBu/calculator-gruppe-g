@@ -40,4 +40,21 @@ public class ParserTest {
 
         verifyNoMoreInteractions(cal);
     }
+
+    @Test
+    public void testParserDotProductXml() throws Exception {
+
+        Calculator cal = mock(Calculator.class);
+
+        Parser parser = new Parser(cal);
+        parser.parse(new File("src/test/resources/test07_dotproduct.xml"));
+
+        verify(cal).push(1.0);
+        verify(cal).push(3.0);
+        verify(cal, times(2)).push(2.0);   // 2.0 kommt zweimal vor: Vektorwert und Anzahl
+        verify(cal).push(4.0);
+        verify(cal).perform(Operation.dot);
+
+        verifyNoMoreInteractions(cal);
+    }
 }
