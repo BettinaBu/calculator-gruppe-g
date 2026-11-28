@@ -24,8 +24,6 @@ public class CalculatorTest {
 
         //verify
         assertEquals(5, result, 0);
-
-
     }
 
     @Test
@@ -37,7 +35,6 @@ public class CalculatorTest {
         double result = calc.perform(Operation.mul);
 
         assertEquals(6, result, 0);
-
     }
 
     @Test
@@ -52,11 +49,6 @@ public class CalculatorTest {
 
     }
 
-
-
-
-
-    //
     @Test(expected = CalculatorException.class)
     public void testPopOnEmptyStack() throws Exception {
 
@@ -77,12 +69,10 @@ public class CalculatorTest {
 
             fail("Exception expected");
 
-
         } catch (CalculatorException e) {
             assertEquals("Division by zero", e.getMessage());
             // e.getCause()
         }
-
     }
 
     @Test
@@ -138,7 +128,23 @@ public class CalculatorTest {
         assertEquals(-1, result, 0);
     }
 
-    // ---------- Skalarprodukt (dot) ----------
+    @Test
+    public void testSinOperation() throws Exception {
+        Calculator calc = new CalculatorImpl();
+        calc.push(Math.PI / 2);
+        double result = calc.perform(Operation.sin);
+
+        assertEquals(1.0, result, 1e-9);
+    }
+
+    @Test
+    public void testCosOperation() throws Exception {
+        Calculator calc = new CalculatorImpl();
+        calc.push(0);
+        double result = calc.perform(Operation.cos);
+
+        assertEquals(1.0, result, 1e-9);
+    }
 
     @Test
     public void testDotProductLength1() throws Exception {

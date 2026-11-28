@@ -38,6 +38,20 @@ public class e2eTest {
         assertEquals(3.0, result, 0);
 
 
+
+
+    }
+
+    @Test
+    public void testParserTest07SinXml() throws Exception {
+        double result = parser.parse(new File("src/test/resources/test07_e2e.xml"));
+        assertEquals(1.0, result, 1e-9);
+    }
+
+    @Test
+    public void testParserTest08CosXml() throws Exception {
+        double result = parser.parse(new File("src/test/resources/test08_e2e.xml"));
+        assertEquals(1.0, result, 1e-9);
     }
 
 
